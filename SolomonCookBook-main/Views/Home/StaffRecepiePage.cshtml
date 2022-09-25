@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+
+
+@model IEnumerable<SolomonCookBook.Models.Recepies>
+<div class="row container m-0">
+    @foreach( var i in Enumerable.Range(0,10))
+    {   
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../@item.image_url" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Recepie_Name</h5>
+                        <a href='@Url.Action("StaffrecepieDetails","Home",new{id=@item.Recepie_ID})' class="btn">Details</a>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                 
+            </div>
+             
+        }
+    }
+</div>
+
+
+

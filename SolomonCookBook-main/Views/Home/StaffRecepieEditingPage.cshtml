@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "_MainLayout";
+}
+@model SolomonCookBook.Models.RecepieImg
+
+<div class="mt-3">
+    <h2>
+        Staff Recepie Edit Page
+    </h2>
+</div>
+<div class="row">
+    <div class="col-md-6 mb-5" style="align-self: center;">
+       <form method="post" asp-action="StaffRecepieEditingPage">
+            <label htmlfor="Recepie_Name">Recepie Name </label>
+            <input type="text" value="@ViewBag.Recepie.Recepie_Name" name="Recepie_Name" onchange="handleChange(this.value,'Name')" class="form-control"/>
+            <br />
+            <label htmlfor="Category">Recepie Category </label>
+            <input type="text" value="@ViewBag.Recepie.Category" name="Category" class="form-control" onchange="handleChange(this.value,'Category')"/>
+            <br />
+            <label htmlfor="video_url">Recepie Video Url </label>
+            <input type="text" value="@ViewBag.Recepie.video_url" name="video_url" class="form-control"/>
+            <br />
+            <label htmlfor="Img">Recepie Img </label>
+            <input type="file" name="Img" class="form-control"/>
+            <br />
+            <label htmlfor="Ingeredients">Ingredients </label>
+            <input type="textbox" value="@ViewBag.Recepie.Ingredients" rows= "4" name="Ingeredients" class="form-control" onchange="handleChange(this.value,'Ingredients')"/>
+            <br />
+             <label htmlfor="Directions">Directions </label>
+            <input type="textbox" value="@ViewBag.Recepie.Directions" rows= "4" name="Directions" class="form-control" onchange="handleChange(this.value,'Directions')"/>
+            <br />
+            <input type="submit" value="Update Recepie" class="btn btn-primary"/>
+
+       </form>
+
+
+    </div>
+    <div class="col-md-6">
+        <h3 >Name : <span><h3 id="Name">@ViewBag.Recepie.Recepie_Name</h3></span></h3>
+       <h3 >Category : <span><h3 id="Category">@ViewBag.Recepie.Category</h3></span></h3>
+        <h5>Ingredients</h5>
+        <p id="Ingredients">@ViewBag.Recepie.Ingredients</p>
+        <h5>Directions</h5>
+        <p id="Directions">@ViewBag.Recepie.Directions</p>
+    </div>
+</div>
+
+<script>
+function handleChange(val, Id) {
+    document.getElementById(Id).innerHTML = val;
+}
+</script>

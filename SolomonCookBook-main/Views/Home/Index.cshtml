@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page Title";
+}
+
+@*<div class="recepie-div1 container">
+    <div class="dropdown" style="display: inline-block;">
+        <button class="dropbtn ">Category</button>
+        <div class="dropdown-content">
+            <a href="#">Africans</a>
+            <a href="#">Indian</a>
+            <a href="#">Chinese</a>
+        </div>
+    </div>
+    <div style="display: inline-block;">
+        <input type="search"/>
+    </div>
+    <div style="display: inline-block;">
+        <button class="btn3">Search</button>
+    </div>
+</div>*@
+
+@*@Html.ActionLink("Create","CreateRecepie","Home")*@
+
+
+@model IEnumerable<SolomonCookBook.Models.Recepies>
+<div class="row container mt-5">
+    
+        @foreach (var item in Model)
+        {
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="../@item.image_url" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Recepie_Name</h5>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                 
+            </div>
+             
+        }
+   
+</div>
+
+
+
+
+
