@@ -111,35 +111,6 @@ public class HomeController : Controller
     }
 
 
-    //// Browse By Category
-    //[HttpGet]
-    //public async  Task<IActionResult> MainPage(string SearchTerm)
-    //{
-    //    var searchquery = from r in db.Recepies select r;
-    //    if (!string.IsNullOrEmpty(SearchTerm))
-    //    {
-    //        searchquery = searchquery.Where(r => r.Category.ToLower().Contains(SearchTerm) || r.Category.ToUpper().Contains(SearchTerm) ||  r.Recepie_Name.Contains(SearchTerm));
-    //    }
-    //   return View(await searchquery.AsNoTracking().ToListAsync());
-    //}
-
-    //public IActionResult MainPage(string category)
-    //{
-    //    var alldata = db.Recepies.ToList();
-    //    var recepiedata = alldata.Where(r => r.Category.Contains("HEALTHY") || r.Category.ToLower().Contains("healthy")).ToList();
-    //    var categories = recepiedata.Select(a => a.Category).ToList();
-    //    RecepieswithCategoryListVM data = new RecepieswithCategoryListVM();
-    //    data.recepies = recepiedata;
-    //    data.categories = categories;
-    //    return View(data);
-    //    //var searchquery = from r in db.Recepies select r;
-    //    //if (!string.IsNullOrEmpty(category))
-    //    //{
-    //    //    searchquery = searchquery.Where(r => r.Category.ToLower().Contains(category));
-    //    //}
-    //    //return View(await searchquery.AsNoTracking().ToListAsync());
-    //}
-
     public ViewResult Recepies()
     {
         var data = db.Recepies.ToList();

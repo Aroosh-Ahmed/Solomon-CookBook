@@ -1828,11 +1828,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DotNet\\Solomon-CookBook\\SolomonCookBook-main\\SolomonCookBook.csproj",
+      "projectUniqueName": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\SolomonCookBook.csproj",
       "projectName": "SolomonCookBook",
-      "projectPath": "D:\\DotNet\\Solomon-CookBook\\SolomonCookBook-main\\SolomonCookBook.csproj",
+      "projectPath": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\SolomonCookBook.csproj",
       "packagesPath": "C:\\Users\\ENVY\\.nuget\\packages\\",
-      "outputPath": "D:\\DotNet\\Solomon-CookBook\\SolomonCookBook-main\\obj\\",
+      "outputPath": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ENVY\\AppData\\Roaming\\NuGet\\NuGet.Config",

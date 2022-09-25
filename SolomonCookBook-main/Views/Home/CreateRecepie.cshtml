@@ -26,8 +26,17 @@
             
                 @Html.LabelFor(model => model.MyRecepie.Category , htmlAttributes: new{@class = "control-label"})
                 @Html.EditorFor(model => model.MyRecepie.Category , new{htmlAttributes = new{@class = "form-control"}})
-        
-        
+                
+                <div class="row">
+                    <div class="col-md-6">
+                         @Html.LabelFor(model => model.MyRecepie.Country , htmlAttributes: new{@class = "control-label"})
+                         @Html.EditorFor(model => model.MyRecepie.Country , new{htmlAttributes = new{@class = "form-control"}})
+                    </div>
+                      <div class="col-md-6">
+                         @Html.LabelFor(model => model.MyRecepie.type , htmlAttributes: new{@class = "control-label"})
+                         @Html.EditorFor(model => model.MyRecepie.type , new{htmlAttributes = new{@class = "form-control"}})
+                    </div>
+                </div>
                 @Html.LabelFor(model => model.MyRecepie.video_url , htmlAttributes: new{@class = "control-label"})
                 @Html.EditorFor(model => model.MyRecepie.video_url , new{htmlAttributes = new{@class = "form-control"}})
 
@@ -39,7 +48,7 @@
                 @Html.EditorFor(model => model.MyRecepie.Ingredients , new{htmlAttributes = new{@class = "form-control"}})
         
                 @Html.LabelFor(model => model.MyRecepie.Directions , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.Directions , new{htmlAttributes = new{@class = "form-control"}})
+                @Html.EditorFor(model => model.MyRecepie.Directions , new{htmlAttributes = new{@class = "form-control .multi-line"}})
 
             <br/>
             
