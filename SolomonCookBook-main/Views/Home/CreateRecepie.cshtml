@@ -15,6 +15,10 @@
     </h2>
 </div>
 <div class="row">
+    @*<input type="text" placeholder="ingredient" id="ingredient"/>
+    <button class="btn btn-warning" onclick="add()" >Add Ingredient</button>
+    <button class="btn btn-danger" onclick="show()" >Show</button>*@
+
     <div class="col-md-6 mb-5" style="align-self: center;">
 
         @using(Html.BeginForm("CreateRecepie","Home",FormMethod.Post, new { enctype = "multipart/form-data" }))
@@ -43,10 +47,21 @@
                 @Html.LabelFor(model => model.MyImage.Img , htmlAttributes: new{@class = "control-label"})
                 @Html.EditorFor(model => model.MyImage.Img  , new{htmlAttributes = new{@class = "form-control"}})
                 
-        
-                @Html.LabelFor(model => model.MyRecepie.Ingredients , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.Ingredients , new{htmlAttributes = new{@class = "form-control"}})
-        
+                @Html.HiddenFor(model => model.MyRecepie.Ingredients, new{@id = "ing"})
+                
+                <div class="row">
+                    <div class="col-md-8">
+                       @* @Html.LabelFor(model => model.MyRecepie.Ingredients , htmlAttributes: new{@class = "control-label"})
+                        @Html.EditorFor(model => model.MyRecepie.Ingredients , new{htmlAttributes = new{@class = "form-control ingredient"}})*@
+                        <input type="text" class="form-control" placeholder="ingredient" id="ingredient"/>
+                        
+                    </div>
+                    <div class="col-md-4">
+                         <button class="btn btn-warning" type="button" onclick="add()" >Add Ingredient</button>
+                         <button class="btn btn-danger" type="button" onclick="show()" >Show</button>
+                    </div>
+                </div>
+                           
                 @Html.LabelFor(model => model.MyRecepie.Directions , htmlAttributes: new{@class = "control-label"})
                 @Html.EditorFor(model => model.MyRecepie.Directions , new{htmlAttributes = new{@class = "form-control .multi-line"}})
 
@@ -63,5 +78,21 @@
     </div>
 
 </div>
+<script>
+    var ingredients = []
+    function add()
+    {
+        console.log("Value is :",document.getElementById("ingredient").value)
+        const value = document.getElementById("ingredient").value;
+        ingredients.push(value);
+        document.getElementById("ing").value = ingredients;
+    }
+function show() {
+    console.log("Ingredients are : ", ingredients)
+}
+function submit() {
+
+}
+</script>
 <br />
 <br />

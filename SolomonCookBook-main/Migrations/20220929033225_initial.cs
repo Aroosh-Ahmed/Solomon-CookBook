@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SolomonCookBook.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -52,7 +52,8 @@ namespace SolomonCookBook.Migrations
                     Ingredients = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Likes = table.Column<int>(type: "int", nullable: true),
                     Directions = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Comments = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Country = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    type = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     status = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -77,12 +78,31 @@ namespace SolomonCookBook.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Comments",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Comment = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecepiesRecepie_ID = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Comments", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Comments_Recepies_RecepiesRecepie_ID",
+                        column: x => x.RecepiesRecepie_ID,
+                        principalTable: "Recepies",
+                        principalColumn: "Recepie_ID");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Recepie_Likes",
                 columns: table => new
                 {
                     R_like_ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    User_ID = table.Column<int>(type: "int", nullable: true),
+                    UserId = table.Column<int>(type: "int", nullable: false),
                     Recepie_ID = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
@@ -93,22 +113,17 @@ namespace SolomonCookBook.Migrations
                         column: x => x.Recepie_ID,
                         principalTable: "Recepies",
                         principalColumn: "Recepie_ID");
-                    table.ForeignKey(
-                        name: "FK_Recepie_Likes_Users_User_ID",
-                        column: x => x.User_ID,
-                        principalTable: "Users",
-                        principalColumn: "User_ID");
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Comments_RecepiesRecepie_ID",
+                table: "Comments",
+                column: "RecepiesRecepie_ID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Recepie_Likes_Recepie_ID",
                 table: "Recepie_Likes",
                 column: "Recepie_ID");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Recepie_Likes_User_ID",
-                table: "Recepie_Likes",
-                column: "User_ID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -117,16 +132,19 @@ namespace SolomonCookBook.Migrations
                 name: "Admins");
 
             migrationBuilder.DropTable(
+                name: "Comments");
+
+            migrationBuilder.DropTable(
                 name: "Recepie_Comments");
 
             migrationBuilder.DropTable(
                 name: "Recepie_Likes");
 
             migrationBuilder.DropTable(
-                name: "Recepies");
+                name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Recepies");
         }
     }
 }
