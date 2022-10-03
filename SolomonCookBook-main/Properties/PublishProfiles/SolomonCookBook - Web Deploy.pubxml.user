@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAArIA03mbnJUaLYG252Uw83QAAAAACAAAAAAAQZgAAAAEAACAAAADwNbkrsAnYZ6SPXXzX4RHciwkZDfXZnln8niL8BkQ7wQAAAAAOgAAAAAIAACAAAAAp6YOJJRczs7wUXzULOXcUvxvXwSeKxvrTXWEk62PPoYAAAAAXqzFm5jLkToi/avdLVkLNRI8ZBYBmMDlUehUjq4it5rOK8lJcV05hDF4Iw9mMOCJ4BA5r63qACXbsWtNoPNEYcCh7IeNa6sQsHx0qIbNnQSl1t62WFXkdwh0KzT3kPKQOtCF/1ND9MMb8FAUobuEcR8Psfuf8ScRiSjX2t9TzP0AAAACZm919oOMOymnG+8gw678dubCpAlpde4oYBx5OxwrhV0kX0Z82BZEOKaOfoMhB9BHLJuLz4kYIiXKtACqPZZBq</EncryptedPassword>
+    <History>True|2022-10-03T04:43:45.8476270Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="defaultconnection">
+      <Value>Data Source=tcp:solomoncookbookdbserver.database.windows.net,1433%3bInitial Catalog=SolomonCookBook_db%3bUser Id=solomon%40solomoncookbookdbserver%3bPassword=Precious123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="SolomonCookBook.Data.TheDbContext">
+      <Value>Data Source=tcp:solomoncookbookdbserver.database.windows.net,1433%3bInitial Catalog=SolomonCookBook_db%3bUser Id=solomon%40solomoncookbookdbserver%3bPassword=Precious123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
