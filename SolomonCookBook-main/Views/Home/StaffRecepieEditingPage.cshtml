@@ -16,38 +16,38 @@
             <input asp-for="MyRecepie.Recepie_ID" type="hidden"/>
             <div class=mb-2>
                 <label class="form-label">Title</label>
-                <input type="text" class="form-control" asp-for="MyRecepie.Recepie_Name"/>
+                <input type="text" class="form-control" asp-for="MyRecepie.Recepie_Name" required/>
              </div>
              <div class=mb-2>
                   <label class="form-label">Category</label>
-                <input type="text" class="form-control" asp-for="MyRecepie.Category"/>
+                <input type="text" class="form-control" asp-for="MyRecepie.Category" required/>
              </div>
                 
                 <div class="row mb-2">
                     <div class="col-md-6">
                         <label class="form-label">Country</label>
-                         <input type="text" class="form-control" asp-for="MyRecepie.Country"/>
+                         <input type="text" class="form-control" asp-for="MyRecepie.Country" required/>
                     </div>
                      <div class="col-md-6">
                         <label class="form-label">Type</label>
-                         <input type="text" class="form-control" asp-for="MyRecepie.type"/>
+                         <input type="text" class="form-control" asp-for="MyRecepie.type" required/>
                     </div>
                 </div>
                      <div class=mb-2>
                          <label class="form-label">Video Url</label>
-                     <input type="text" class="form-control" asp-for="MyRecepie.video_url"/>
+                     <input type="text" class="form-control" asp-for="MyRecepie.video_url" required/>
                      </div>
                      <div class=mb-2>
                           <label class="form-label">Image</label>
-                     <input type="file" class="form-control" asp-for="MyImage.Img"/>
+                     <input type="file" class="form-control" asp-for="MyImage.Img" required/>
                      </div>
                     <div class=mb-2>
                           <label class="form-label">Directions</label>
                           @*<input class="form-control"  />*@
-                          <textarea class="form-control" asp-for="MyRecepie.Directions"></textarea>
+                          <textarea class="form-control" asp-for="MyRecepie.Directions" required></textarea>
                      </div>
                      <div class="mb-2">
-                         <input type="submit" rows="4" multiple class="btn btn-primary" value="Edit"/>
+                         <input type="submit" rows="4" multiple class="btn btn-primary" value="Edit" />
                      </div>
            
         </form>

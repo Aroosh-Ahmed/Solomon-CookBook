@@ -25,9 +25,10 @@
             Directions
             </h3>
             <ul>
-                @foreach(string direction in @Model.Directions?.Split(",")){
+                @Model.Directions
+                @*@foreach(string direction in @Model.Directions?.Split(",")){
                     <li>@direction</li>
-                }
+                }*@
             </ul> 
         </div>
        

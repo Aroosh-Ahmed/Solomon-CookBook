@@ -2,6 +2,7 @@ D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\appsettings.json
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\global.json
+D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\libman.json
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\SolomonCookBook.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\SolomonCookBook.runtimeconfig.json
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\SolomonCookBook.pdb

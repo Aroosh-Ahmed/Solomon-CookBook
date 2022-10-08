@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B/UPyMa8t3SQyQTDzcA80VV7/H3VIHCNG81jZFLshg0=",
+  "Hash": "AeBBZx1addc2xyDFLBneuLap1xouPYq+vA+iAbzswUM=",
   "Source": "SolomonCookBook",
   "BasePath": "_content/SolomonCookBook",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\girl.jpg"
+    },
+    {
+      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\Grilled peach and waterclass salad.png",
+      "SourceId": "SolomonCookBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
+      "BasePath": "_content/SolomonCookBook",
+      "RelativePath": "Images/Grilled peach and waterclass salad.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Grilled peach and waterclass salad.png"
     },
     {
       "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\Grilled peach and watercress salad.png",
