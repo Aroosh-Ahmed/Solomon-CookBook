@@ -5,84 +5,62 @@
 
 <div class="mt-3">
     <h2>
-        Staff Recepie Edit Page
+        Staff Recepie Editing Page
     </h2>
 </div>
 <div class="row">
-    <div class="row">
-    <div class="col-md-6 mb-5" style="align-self: center;">
 
-        @using(Html.BeginForm("CreateRecepie","Home",FormMethod.Post, new { enctype = "multipart/form-data" }))
-        {
-            
-                @Html.LabelFor(model => model.MyRecepie.Recepie_Name , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.Recepie_Name , new{htmlAttributes = new { @class = "form-control" , @default_value = "aa"}}) 
-        
-            
-                @Html.LabelFor(model => model.MyRecepie.Category , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.Category , new{htmlAttributes = new{@class = "form-control"}})
+        <div class="col-md-6 mb-5" style="align-self: center;">
+
+        <form method="post" asp-action="StaffRecepieEditingPage"  enctype = "multipart/form-data" >
+            <input asp-for="MyRecepie.Recepie_ID" type="hidden"/>
+            <div class=mb-2>
+                <label class="form-label">Title</label>
+                <input type="text" class="form-control" asp-for="MyRecepie.Recepie_Name"/>
+             </div>
+             <div class=mb-2>
+                  <label class="form-label">Category</label>
+                <input type="text" class="form-control" asp-for="MyRecepie.Category"/>
+             </div>
                 
-                <div class="row">
+                <div class="row mb-2">
                     <div class="col-md-6">
-                         @Html.LabelFor(model => model.MyRecepie.Country , htmlAttributes: new{@class = "control-label"})
-                         @Html.EditorFor(model => model.MyRecepie.Country , new{htmlAttributes = new{@class = "form-control"}})
+                        <label class="form-label">Country</label>
+                         <input type="text" class="form-control" asp-for="MyRecepie.Country"/>
                     </div>
-                      <div class="col-md-6">
-                         @Html.LabelFor(model => model.MyRecepie.type , htmlAttributes: new{@class = "control-label"})
-                         @Html.EditorFor(model => model.MyRecepie.type , new{htmlAttributes = new{@class = "form-control"}})
+                     <div class="col-md-6">
+                        <label class="form-label">Type</label>
+                         <input type="text" class="form-control" asp-for="MyRecepie.type"/>
                     </div>
                 </div>
-                @Html.LabelFor(model => model.MyRecepie.video_url , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.video_url , new{htmlAttributes = new{@class = "form-control"}})
-
-                @Html.LabelFor(model => model.MyImage.Img , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyImage.Img  , new{htmlAttributes = new{@class = "form-control"}})
-                
-        
-                @Html.LabelFor(model => model.MyRecepie.Ingredients , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.Ingredients , new{htmlAttributes = new{@class = "form-control"}})
-        
-                @Html.LabelFor(model => model.MyRecepie.Directions , htmlAttributes: new{@class = "control-label"})
-                @Html.EditorFor(model => model.MyRecepie.Directions , new{htmlAttributes = new{@class = "form-control .multi-line"}})
-
-            <br/>
-            
-            <input type="submit" class="btn btn-primary" value="Create Recepie" />
-            
-        }
-
+                     <div class=mb-2>
+                         <label class="form-label">Video Url</label>
+                     <input type="text" class="form-control" asp-for="MyRecepie.video_url"/>
+                     </div>
+                     <div class=mb-2>
+                          <label class="form-label">Image</label>
+                     <input type="file" class="form-control" asp-for="MyImage.Img"/>
+                     </div>
+                    <div class=mb-2>
+                          <label class="form-label">Directions</label>
+                          @*<input class="form-control"  />*@
+                          <textarea class="form-control" asp-for="MyRecepie.Directions"></textarea>
+                     </div>
+                     <div class="mb-2">
+                         <input type="submit" rows="4" multiple class="btn btn-primary" value="Edit"/>
+                     </div>
+           
+        </form>
     </div>
-   @* <div class="col-md-6 mb-5" style="align-self: center;">
-       <form method="post" asp-action="StaffRecepieEditingPage">
-            <label htmlfor="Recepie_Name">Recepie Name </label>
-            <input type="text" value="@ViewBag.Recepie.Recepie_Name" name="Recepie_Name" onchange="handleChange(this.value,'Name')" class="form-control"/>
-            <br />
-            <label htmlfor="Category">Recepie Category </label>
-            <input type="text" value="@ViewBag.Recepie.Category" name="Category" class="form-control" onchange="handleChange(this.value,'Category')"/>
-            <br />
-            <label htmlfor="video_url">Recepie Video Url </label>
-            <input type="text" value="@ViewBag.Recepie.video_url" name="video_url" class="form-control"/>
-            <br />
-            <label htmlfor="Img">Recepie Img </label>
-            <input type="file" name="Img" class="form-control"/>
-            <br />
-            <label htmlfor="Ingeredients">Ingredients </label>
-            <input type="textbox" value="@ViewBag.Recepie.Ingredients" rows= "4" name="Ingeredients" class="form-control" onchange="handleChange(this.value,'Ingredients')"/>
-            <br />
-             <label htmlfor="Directions">Directions </label>
-            <input type="textbox" value="@ViewBag.Recepie.Directions" rows= "4" name="Directions" class="form-control" onchange="handleChange(this.value,'Directions')"/>
-            <br />
-            <input type="submit" value="Update Recepie" class="btn btn-primary"/>
-
-       </form>
-    </div>*@
     <div class="col-md-6">
-        <h3 >Name : <span><h3 id="Name">@ViewBag.Recepie.Recepie_Name</h3></span></h3>
-       <h3 >Category : <span><h3 id="Category">@ViewBag.Recepie.Category</h3></span></h3>
+        <h4>Name : <span>@ViewBag.Recepie.Recepie_Name</span></h3>
+       <h5 >Category : <span>@ViewBag.Recepie.Category</span></h5>
         <h5>Ingredients</h5>
         <p id="Ingredients">@ViewBag.Recepie.Ingredients</p>
         <h5>Directions</h5>
         <p id="Directions">@ViewBag.Recepie.Directions</p>
+        <h5>Country : @ViewBag.Recepie.Country</h5>
+        <h5>Type : @ViewBag.Recepie.type</h5>
     </div>
 </div>
 

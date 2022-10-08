@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jBYxAVnLhDFzoSMtKS44FnxLb9U5AT1sBEN2JJMUpUs=",
+  "Hash": "/oZ3kTszdp2ZNbOBcwrVM8xP0/HmNw4GmeeU4gBbBe4=",
   "Source": "SolomonCookBook",
   "BasePath": "_content/SolomonCookBook",
   "Mode": "Default",
@@ -119,6 +119,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\back.jpg",
+      "SourceId": "SolomonCookBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
+      "BasePath": "_content/SolomonCookBook",
+      "RelativePath": "Images/back.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\back.jpg"
+    },
+    {
       "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\cooker-king-82qQj-MuaPs-unsplash.jpg",
       "SourceId": "SolomonCookBook",
       "SourceType": "Discovered",
@@ -185,6 +202,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\farhad-ibrahimzade-HhbcIhf9vho-unsplash.jpg"
+    },
+    {
+      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\front.jpg",
+      "SourceId": "SolomonCookBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
+      "BasePath": "_content/SolomonCookBook",
+      "RelativePath": "Images/front.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\front.jpg"
+    },
+    {
+      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\girl.jpg",
+      "SourceId": "SolomonCookBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
+      "BasePath": "_content/SolomonCookBook",
+      "RelativePath": "Images/girl.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\girl.jpg"
     },
     {
       "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\Grilled peach and watercress salad.png",

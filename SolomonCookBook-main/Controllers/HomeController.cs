@@ -170,7 +170,9 @@ public class HomeController : Controller
     {
         var recepie = db.Recepies.Where(x => x.Recepie_ID == id).FirstOrDefault();
         ViewBag.Recepie = recepie;
-        return View();
+        var Recepie_data = new RecepieImg();
+        Recepie_data.MyRecepie = recepie;
+        return View(Recepie_data);
     }
 
     [HttpPost]
@@ -181,21 +183,16 @@ public class HomeController : Controller
         var fullpath = Path.Combine(path, filepath);
         UploadImage(model.MyImage.Img, fullpath);
         string imgPath = filepath;
-        var data = new Recepies
-        {
-            Recepie_Name = model.MyRecepie.Recepie_Name,
-            Category = model.MyRecepie.Category,
-            video_url = model.MyRecepie.video_url,
-            image_url = imgPath,
-            Ingredients = model.MyRecepie.Ingredients,
-            Directions = model.MyRecepie.Directions,
-            //Comments = "No Comments for Now"
-
-        };
-
-        db.Recepies.Add(data);
+        var recepie = db.Recepies.Where(x => x.Recepie_ID == model.MyRecepie.Recepie_ID).FirstOrDefault();
+        recepie.Recepie_Name = model.MyRecepie.Recepie_Name;
+        recepie.Category = model.MyRecepie.Category;
+        recepie.Ingredients = model.MyRecepie.Ingredients;
+        recepie.Directions = model.MyRecepie.Directions;
+        recepie.Country = model.MyRecepie.Country;
+        recepie.type = model.MyRecepie.type;
+        recepie.image_url = imgPath;
         db.SaveChanges();
-        return RedirectToAction("Index");
+        return RedirectToAction("StaffRecepiePage");
     }
 
     [HttpGet]
@@ -214,6 +211,9 @@ public class HomeController : Controller
         string imgPath = filepath; 
         var data = new Recepies{
             Recepie_Name = model.MyRecepie.Recepie_Name,
+            Country = model.MyRecepie.Country,
+            type = model.MyRecepie.type,
+            status = "under-review",
             Category = model.MyRecepie.Category,
             video_url = model.MyRecepie.video_url,
             image_url = imgPath,
@@ -241,6 +241,14 @@ public class HomeController : Controller
         var comments = db.Recepie_Comments.Where(c => c.Recepie_ID == id);
         ViewBag.Comments = comments;
         return View(recepie);
+    }
+
+    public IActionResult DeleteRecepie(int id)
+    {
+        var recepie = db.Recepies.Where(x => x.Recepie_ID == id).FirstOrDefault();
+        db.Recepies.Remove(recepie);
+        db.SaveChanges();
+        return RedirectToAction("StaffRecepiePage");
     }
 
     public ViewResult Shop()
