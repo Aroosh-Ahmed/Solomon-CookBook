@@ -43,6 +43,28 @@ namespace SolomonCookBook.Migrations
                     b.ToTable("Admins");
                 });
 
+            modelBuilder.Entity("SolomonCookBook.Models.Comments", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("RecepiesRecepie_ID")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RecepiesRecepie_ID");
+
+                    b.ToTable("Comments");
+                });
+
             modelBuilder.Entity("SolomonCookBook.Models.Recepie_Comments", b =>
                 {
                     b.Property<int>("R_Comment_ID")
@@ -79,14 +101,12 @@ namespace SolomonCookBook.Migrations
                     b.Property<int?>("Recepie_ID")
                         .HasColumnType("int");
 
-                    b.Property<int?>("User_ID")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("R_like_ID");
 
                     b.HasIndex("Recepie_ID");
-
-                    b.HasIndex("User_ID");
 
                     b.ToTable("Recepie_Likes");
                 });
@@ -100,9 +120,6 @@ namespace SolomonCookBook.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Recepie_ID"), 1L, 1);
 
                     b.Property<string>("Category")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Comments")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
@@ -167,19 +184,25 @@ namespace SolomonCookBook.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("SolomonCookBook.Models.Comments", b =>
+                {
+                    b.HasOne("SolomonCookBook.Models.Recepies", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("RecepiesRecepie_ID");
+                });
+
             modelBuilder.Entity("SolomonCookBook.Models.Recepie_likes", b =>
                 {
                     b.HasOne("SolomonCookBook.Models.Recepies", "Recepie")
                         .WithMany()
                         .HasForeignKey("Recepie_ID");
 
-                    b.HasOne("SolomonCookBook.Models.User", "User")
-                        .WithMany()
-                        .HasForeignKey("User_ID");
-
                     b.Navigation("Recepie");
+                });
 
-                    b.Navigation("User");
+            modelBuilder.Entity("SolomonCookBook.Models.Recepies", b =>
+                {
+                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

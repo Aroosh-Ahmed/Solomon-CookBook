@@ -17,7 +17,7 @@
             </h3>
             <br/>
             <ul>
-                @foreach(string ingredient in @Model.Ingredients.Split(",")){
+                @foreach(string ingredient in @Model.Ingredients?.Split(",")){
                     <li>@ingredient</li>
                 }
             </ul>
@@ -25,9 +25,10 @@
             Directions
             </h3>
             <ul>
-                @foreach(string direction in @Model.Directions.Split(",")){
+                @Model.Directions
+                @*@foreach(string direction in @Model.Directions?.Split(",")){
                     <li>@direction</li>
-                }
+                }*@
             </ul> 
         </div>
        

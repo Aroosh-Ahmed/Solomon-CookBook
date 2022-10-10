@@ -10,7 +10,7 @@
             </h3>
             <br/>
             <ul>
-                @foreach(string ingredient in @Model.Ingredients.Split(",")){
+                @foreach(string ingredient in @Model.Ingredients?.Split(",")){
                     <li>@ingredient</li>
                 }
             </ul> 
@@ -24,6 +24,11 @@
                 <div style="margin:5px;">
                      @Html.ActionLink("Approve Recepie","ApproveRecepie", new{id = @Model.Recepie_ID} , new {@class="btn btn-success"})
                 </div>
+            </div>
+
+            <div>
+                <h3> Directions</h3>
+                <p>@Model.Directions</p>
             </div>
             
              

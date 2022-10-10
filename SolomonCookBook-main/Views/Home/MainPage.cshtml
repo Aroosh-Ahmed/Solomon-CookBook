@@ -27,10 +27,15 @@
                     <select class="form-select" onchange="this.form.submit()" name="category">
                         <option value="">Select a Category</option>
                         <option value ="clear">Clear Filter</option>
-                        @foreach(var category in Model.categories)
+                         <option value="Healthy">Healthy</option>
+                        <option value="African">African</option>
+                        <option value="Drinks">Drinks</option>
+                        <option value="Desserts">Desserts</option>
+                        <option value="Chinese">Chinese</option>
+                        @*@foreach(var category in Model.categories)
                             {
                                 <option value="@category">@category</option>
-                            }
+                            }*@
                     </select>               
             </div>
   
