@@ -62,15 +62,20 @@
                 @Html.HiddenFor(model => model.MyRecepie.Ingredients, new{@id = "ing"})
                 
                 <div class="row mt-3 mb-3">
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                        @* @Html.LabelFor(model => model.MyRecepie.Ingredients , htmlAttributes: new{@class = "control-label"})
                         @Html.EditorFor(model => model.MyRecepie.Ingredients , new{htmlAttributes = new{@class = "form-control ingredient"}})*@
-                        <input type="text" class="form-control" placeholder="ingredient" id="ingredient"/>
+
+                                <input type="text" class="form-control d-inline-block "   style="width:20%" placeholder="quantity" id="ingredient-quantity" />
+
+                                <input type="text" class="form-control d-inline-block"  style="width:75%" placeholder="ingredient" id="ingredient" />        
+
                         
                     </div>
                     
-                    <div class="col-md-4">
-                         <button class="btn btn-warning" type="button" onclick="add()" >Add Ingredient</button>
+                    <div class="col-md-3">
+                         <button class="btn btn-primary" type="button" onclick="add()" >Add</button>
+                         <button class="btn btn-success" type="button" onclick="update()" >Update</button>
                          @*<button class="btn btn-danger" type="button" onclick="show()" >Show</button>*@
                     </div>
                 </div>
@@ -96,6 +101,8 @@
 </div>
 <script>
     var ingredients = []
+    var i = 0;
+var j = 0;
 function iter(item) {
     var ul = document.getElementById("ingredients")
     var li = document.createElement("li");
@@ -104,16 +111,65 @@ function iter(item) {
 }
     function add()
     {
-        console.log("Value is :",document.getElementById("ingredient").value)
+        const quantity = document.getElementById("ingredient-quantity").value;
         const value = document.getElementById("ingredient").value;
-        ingredients.push(value);
+        const ingredient = quantity+"-"+value
+        ingredients.push(ingredient);
         document.getElementById("ing").value = ingredients;
         var ul = document.getElementById("ingredients")
         var li = document.createElement("li");
-        li.appendChild(document.createTextNode(value));
+        li.appendChild(document.createTextNode(ingredient));
+        var editbutton = document.createElement("button");
+        editbutton.innerText = "Edit";
+        editbutton.className = "btn btn-primary"
+        editbutton.id = i.toString()
+        var a = i;
+        editbutton.addEventListener('click', function editingredient() {
+            document.getElementById("ingredient").value = ingredients[a].split("-")[1]
+            document.getElementById("ingredient-quantity").value = ingredients[a].split("-")[0]
+            j = a;
+            console.log("j is : ", j)
+        });
+        li.appendChild(editbutton)
+        li.id = i.toString()
         ul.appendChild(li);
-        document.getElementById("ingredient").innerHTML = " "
+
+        //document.getElementById("ingredient").innerHTML = " "
+        document.getElementById("ingredient-quantity").value =""
+        document.getElementById("ingredient").value=""
+        i++;
     }
+
+function update() {
+    //console.log("J is : ",j)
+    var a = j
+    console.log(" a is : ",a)
+     const quantity = document.getElementById("ingredient-quantity").value;
+        const value = document.getElementById("ingredient").value;
+        const ingredient = quantity+"-"+value
+    const li = document.getElementById(a.toString());
+    ingredients[a] = ingredient
+    li.innerText =ingredient
+    var editbutton = document.createElement("button");
+        editbutton.innerText = "Edit";
+        editbutton.className = "btn btn-primary"
+        editbutton.id = a.toString()
+        editbutton.addEventListener('click', function editingredient() {
+            document.getElementById("ingredient").value = ingredients[a].split("-")[1]
+            document.getElementById("ingredient-quantity").value = ingredients[a].split("-")[0]
+            j = a;
+            console.log("j is : ", j)
+        });
+    li.appendChild(editbutton);
+    li.id = a.toString();
+    document.getElementById("ingredient-quantity").value =""
+    document.getElementById("ingredient").value=""
+   
+}
+
+    //editbutton.addEventListener('click', feditingredient(i)});
+
+
 function show() {
     console.log("Ingredients are : ", ingredients)
 }

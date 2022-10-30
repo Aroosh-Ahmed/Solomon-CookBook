@@ -16,9 +16,14 @@
             Ingredients
             </h3>
             <br/>
+            <label class="h6 d-inline">Serving Size</label>
+            <input id="serving" class="form-control w-25 d-inline" onchange="hangleServing()" type="number"/>
             <ul>
                 @foreach(string ingredient in @Model.Ingredients?.Split(",")){
-                    <li>@ingredient</li>
+                    <li >
+                        <span id="q">@ingredient.Split("-")[0]</span>
+                        <span style="marginn-left:5px;">@ingredient.Split("-")[1]</span>
+                    </li>
                 }
             </ul>
              <h3>
@@ -92,9 +97,21 @@
 
 
     <script>
-        function ShowAlert(){
-            alert("Successfully Liked Recepie");
-        }
+    //const a = document.getElementById("q").innerHTML;
+        var elms = document.querySelectorAll("[id='q']");
+        var quantities = []
+        for(var i = 0; i < elms.length; i++) {
+        quantities[i]=(elms[i].innerHTML)
+         }
+function hangleServing() {
+    var elms = document.querySelectorAll("[id='q']");
+    var servingval = document.getElementById("serving").value;
+    for(var i = 0; i < elms.length; i++) {
+        elms[i].innerHTML = servingval*parseInt(quantities[i]);
+    }
+    console.log("Serving value is : ", servingval)
+    //document.getElementById("q").innerHTML = servingval*parseInt(a);
+}
     </script>
    @* @if (Model != null)
     {
