@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "stDf44ep15+pLRvTQEY24FgUCypAAXAhskqQTWGPP9ty57G1Uuntdft4jlukA/hbbfF9X2LARcbiwpjOEx3oEA==",
   "success": true,
-  "projectFilePath": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\SolomonCookBook.csproj",
+  "projectFilePath": "C:\\Users\\solom\\Documents\\GitHub\\Solomon-CookBook\\SolomonCookBook-main\\SolomonCookBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ENVY\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ENVY\\.nuget\\packages\\microsoft.applicationinsights\\2.15.0\\microsoft.applicationinsights.2.15.0.nupkg.sha512",
