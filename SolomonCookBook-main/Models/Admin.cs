@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-namespace SolomonCookBook.Models{
+namespace WebApp.Models{
     public class Admin
     {
         [Key]

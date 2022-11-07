@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AeBBZx1addc2xyDFLBneuLap1xouPYq+vA+iAbzswUM=",
+  "Hash": "/B6YdRC1IJLCE4R25OU63at4X/kRGAhqpeFqPml3dLA=",
   "Source": "SolomonCookBook",
   "BasePath": "_content/SolomonCookBook",
   "Mode": "Default",
@@ -221,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\front.jpg"
     },
     {
+      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\ghfghj.jpg",
+      "SourceId": "SolomonCookBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
+      "BasePath": "_content/SolomonCookBook",
+      "RelativePath": "Images/ghfghj.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ghfghj.jpg"
+    },
+    {
       "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\girl.jpg",
       "SourceId": "SolomonCookBook",
       "SourceType": "Discovered",
@@ -287,6 +304,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\haim2.jpg"
+    },
+    {
+      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\Jollof_Rice_recipe.jpeg",
+      "SourceId": "SolomonCookBook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
+      "BasePath": "_content/SolomonCookBook",
+      "RelativePath": "Images/Jollof_Rice_recipe.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Jollof_Rice_recipe.jpeg"
     },
     {
       "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\Main_Bg.jpg",
@@ -457,23 +491,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\toa-heftiba-oQvESMKUkzM-unsplash.jpg"
-    },
-    {
-      "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\vegs.jpg",
-      "SourceId": "SolomonCookBook",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\",
-      "BasePath": "_content/SolomonCookBook",
-      "RelativePath": "Images/vegs.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\vegs.jpg"
     },
     {
       "Identity": "D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\wwwroot\\Images\\wallpaperflare.com_wallpaper.jpg",

@@ -29,6 +29,7 @@ D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\PayPalCoreSDK.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\System.Diagnostics.PerformanceCounter.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\obj\Release\net6.0\PubTmp\Out\System.Drawing.Common.dll

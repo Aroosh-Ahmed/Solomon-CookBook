@@ -135,3 +135,4 @@ D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\bin\Release\net
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\bin\Release\net6.0\System.Diagnostics.PerformanceCounter.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\bin\Release\net6.0\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
 D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\bin\Release\net6.0\libman.json
+D:\DotNet\Solomon-CookBook\Solomon-CookBook\SolomonCookBook-main\bin\Release\net6.0\PayPalCoreSDK.dll

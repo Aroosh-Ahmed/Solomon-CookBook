@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Dynamic;
 using SolomonCookBook.Models;
 using SolomonCookBook.Data;
 using Microsoft.EntityFrameworkCore;
+
 
 namespace SolomonCookBook.Controllers;
 
@@ -249,6 +249,12 @@ public class HomeController : Controller
         db.Recepies.Remove(recepie);
         db.SaveChanges();
         return RedirectToAction("StaffRecepiePage");
+    }
+
+    [HttpGet]
+    public ViewResult PaypalPayment()
+    {
+        return View();
     }
 
     public ViewResult Shop()

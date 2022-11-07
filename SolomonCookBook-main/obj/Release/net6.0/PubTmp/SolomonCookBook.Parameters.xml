@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="SolomonCookBook" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="SolomonCookBook20221107084414" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
-  </parameter>
-  <parameter name="SolomonCookBook.Data.TheDbContext" description="" value="Data Source=tcp:solomoncookbookdbserver.database.windows.net,1433;Initial Catalog=SolomonCookBook_db;User Id=solomon@solomoncookbookdbserver;Password=Precious123" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^D:\\DotNet\\Solomon-CookBook\\Solomon-CookBook\\SolomonCookBook-main\\obj\\Release\\net6\.0\\PubTmp\\EFSQLScripts\\SolomonCookBook\.Data\.TheDbContext\.sql$" />
   </parameter>
 </parameters>

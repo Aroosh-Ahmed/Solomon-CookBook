@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/npkCc5xvUauWlP/74RqugAAAAACAAAAAAAQZgAAAAEAACAAAADNI98oramDJCQTLOQcoB6GAbApt129pNZi6wI3z3c1hAAAAAAOgAAAAAIAACAAAAD1ZKyr/fPBGEIKy+3rKA2GsEKA/slgCTbFd3qso/NVA4AAAABh9/1/OYavrA/BTISy0wTFB46r9vnrfg6jz/OaeU/1Vai01GgOtDETGfXk+D4+7xiDED0oru59FFlaNH84ViGSuCK5tJUw/Tw3e3eXx5j65fpJiUVk6ji0wHg2vHNZFASnlkZvB+Iggwp21xe2dGSaQMCbGM45lUBOSLr5IMYcckAAAAD+EJrJZ/6EOWuWKhTynDE2/y/N9Iuj9KmOUd6N2GY4LCkYpZgLcw8iBjIULH2fNohMq3NMRs9AZ95LakvNhbJR</EncryptedPassword>
+    <History>True|2022-11-07T03:47:54.5898135Z;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="defaultconnection">
+      <Value>Server=localhost%3bDatabase=CookBook%3b MultipleActiveResultSets=true%3b Trusted_Connection=True%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
